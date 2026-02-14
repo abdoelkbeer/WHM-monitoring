@@ -44,3 +44,26 @@ npm run worker
 - توكن WHM يُخزّن مشفرًا AES-256-GCM عبر `APP_ENCRYPTION_KEY`.
 - التنبيهات البريدية تُرسل عند فتح incident (واختياريًا عند الحل).
 - منطق فتح/إغلاق incident يعتمد على open/close threshold من جدول الإعدادات.
+
+## نشر المشروع على Vercel (Next.js)
+لتنفيذ إعداد Vercel بسرعة (ربط المشروع + إضافة Environment Variables للـ Preview/Production + خطوات التحقق من Preview Deployments):
+
+```bash
+bash scripts/vercel/setup-vercel.sh
+```
+
+> ملاحظات مهمة:
+> - السكربت يتطلب `vercel` CLI و `gh` CLI.
+> - يضيف المتغيرات التالية على بيئتي `preview` و `production`:
+>   - `NEXT_PUBLIC_SUPABASE_URL`
+>   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+>   - `SUPABASE_SERVICE_ROLE_KEY`
+>   - `APP_ENCRYPTION_KEY`
+>   - `SMTP_HOST`
+>   - `SMTP_PORT`
+>   - `SMTP_USER`
+>   - `SMTP_PASS`
+>   - `SMTP_FROM`
+>   - `PLAYWRIGHT_HEADLESS`
+>   - `ADMIN_EMAIL_ALLOWLIST`
+> - تم تثبيت Framework على `Next.js` عبر `vercel.json`.
