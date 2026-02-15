@@ -4,8 +4,18 @@
 
 body {
   @apply bg-slate-100 text-slate-900;
+  background-image: radial-gradient(circle at top, #dbeafe 0%, #f8fafc 40%, #f1f5f9 100%);
 }
 
 .card {
-  @apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm;
+}
+
+.hero-panel {
+  background: linear-gradient(120deg, #020617 0%, #0f172a 35%, #0e7490 100%);
+}
+
+.dashboard-shell {
+  background: linear-gradient(120deg, #020617 0%, #111827 55%, #334155 100%);
+  box-shadow: 0 20px 70px rgba(15, 23, 42, 0.35);
 }
